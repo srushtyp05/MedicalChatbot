@@ -1,0 +1,29 @@
+
+.image {
+    flex-basis: 90%;
+}
+img {
+    max-width: 300%
+  }
+  .image-container{
+    display: flex;
+   
+  }
+  .t{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    padding-left: 40px;
+    margin-left: 30%;
+    background-color: rgb(241, 241, 240);
+  }
+  .text {
+      font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding-left: 40px;
+    border: 2px solid rgb(228, 225, 225);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    border-radius: 5px;
+    margin-left: 30%;
+    background-color: rgb(241, 241, 240);
+  }
+  

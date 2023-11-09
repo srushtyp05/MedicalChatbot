@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index1.css">
+    <title>Medical Chatbot</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+           
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="medicine.html">MEDICINE INFO</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="logout.html">LOGOUT</a></li>
+            </ul>
+        </div>
+        </div>
+
+       
+        <div class="container">
+
+            <h1 class="heading">MEDICINES</h1>
+         
+            <input type="text" placeholder="Search Here" id="search-box"> 
+        
+       
+        
+            <div class="image-container">
+        
+                <div class="image" data-title="accupril">
+                    <img src="images/accupril.jpg" alt="">
+                    <h3>Accupril</h3>
+                    
+                </div>
+        
+                <div class="image" data-title="aceon">
+                    <img src="images/aceon.jpg" alt="">
+                    <h3> Aceon</h3>
+                    
+                </div>
+        
+                <div class="image" data-title="acetaminophen">
+                    <img src="images/acetaminophen.jpg" alt="">
+                    <h3>Acetaminophen</h3>
+                
+                </div>
+        
+                <div class="image" data-title="actos">
+                    <img src="images/actos.jpg" alt="">
+                    <h3>Actos</h3>
+                    
+                </div>
+        
+                <div class="image" data-title="adalat">
+                    <img src="images/adalat.jpg" alt="">
+                    <h3>Adalat</h3>
+                  
+                </div>
+        
+                <div class="image" data-title="albuterol">
+                    <img src="images/albuterol.jpg" alt="">
+                    <h3>Albuterol</h3>
+                    
+                </div>
+
+                <div class="image" data-title="allegra">
+                    <img src="images/allegra.jpg" alt="">
+                    <h3>Allegra </h3>
+                    
+                </div>
+
+                <div class="image" data-title="aspirin">
+                    <img src="images/aspirin.jpg" alt="">
+                    <h3> Aspirin</h3>
+                    
+                </div>
+
+                <div class="image" data-title="beclate">
+                    <img src="images/beclate.jpg" alt="">
+                    <h3> Beclate</h3>
+                    
+                </div>
+
+                <div class="image" data-title="buspirone">
+                    <img src="images/buspirone.jpg" alt="">
+                    <h3>Buspirone </h3>
+                    
+                </div>
+
+                <div class="image" data-title="duphalac">
+                    <img src="images/duphalac.jpg" alt="">
+                    <h3>Duphalac </h3>
+                    
+                </div>
+
+                <div class="image" data-title="imigran">
+                    <img src="images/imigran.jpg" alt="">
+                    <h3>Imigran </h3>
+                    
+                </div>
+
+                <div class="image" data-title="ketotifen">
+                    <img src="images/ketotifen.jpg" alt="">
+                    <h3> Ketotifen</h3>
+                    
+                </div>
+
+                <div class="image" data-title="paracetamol">
+                    <img src="images/paracetamol.jpg" alt="">
+                    <h3> Peracetamol</h3>
+                    
+                </div>
+
+                <div class="image" data-title="seroflo">
+                    <img src="images/seroflo.jpg" alt="">
+                    <h3> Seroflo</h3>
+                    
+                </div>
+
+                <div class="image" data-title="serpina">
+                    <img src="images/serpina.jpg" alt="">
+                    <h3> Serpina</h3>
+                    
+                </div>
+
+                <div class="image" data-title="zoloft">
+                    <img src="images/zoloft.jpg" alt="">
+                    <h3>Zoloft </h3>
+                    
+                </div>
+        
+            </div>
+        
+       
+        
+    
+</body>
+
+
+<script>
+
+    let searchBox = document.querySelector('#search-box');
+    let images = document.querySelectorAll('.container .image-container .image');
+    
+    searchBox.oninput = () =>{
+       images.forEach(hide => hide.style.display = 'none');
+       let value = searchBox.value;
+       images.forEach(filter =>{
+          let title = filter.getAttribute('data-title');
+          if(value == title){
+             filter.style.display = 'block';
+          }
+          if(searchBox.value == ''){
+             filter.style.display = 'block';
+          }
+       });
+    };
+    
+    </script>
+    
+
+
+</html>
